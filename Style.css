@@ -49,7 +49,7 @@ main {
 /* Home Styles */
 .mission-statement {
     height: 50vh;
-    background-image: url("../pictures/home.jpeg");
+    background-image: url("../pictures/homepage.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -59,9 +59,8 @@ main {
     align-items: center;
 }
 
-.mission-statement h2,
-.mission-statement p {
-    color: #ffffff;
+.mission-statement p, h2 {
+    color: #black;
     margin: 10px;
     font-size: 20px;
 }
