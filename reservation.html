@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Kabayan</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Kabayan</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="reservation-details">
+            <div class="opening-hours">
+                <h2>Opening Hours:</h2>
+                <p>Monday - Friday</p>
+                <p>9:00 AM - 9:00 PM</p>
+            </div>
+            <div class="additional-info">
+                <h2>Additional Info:</h2>
+                <p>Phone: 403-456-7890</p>
+                <p>Address: 123 Main Street NW, T2N 1A1</p>
+            </div>
+            <div class="reservation-form">
+                <h2>Make a Reservation</h2>
+                <form id="reservation-form" action="https://webdevbasics.net/scripts/demo.php" method="post" onsubmit="showConfirmation()">
+                    <label for="table-size">Choose Table Size:</label>
+                    <select id="table-size" name="table-size">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+
+                    <label for="day">Choose Day:</label>
+                    <input type="date" id="day" name="day" required>
+
+                    <label for="time">Choose Time:</label>
+                    <select id="time" name="time" required>
+                        <option value="" disabled selected>Select a time slot</option>
+                        <option value="09:00 AM">09:00 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="01:00 PM">01:00 PM</option>
+                        <option value="02:00 PM">02:00 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="04:00 PM">04:00 PM</option>
+                        <option value="05:00 PM">05:00 PM</option>
+                        <option value="06:00 PM">06:00 PM</option>
+                        <option value="07:00 PM">07:00 PM</option>
+                        <option value="08:00 PM">08:00 PM</option>
+                        <option value="09:00 PM">09:00 PM</option>
+                    </select>
+
+                    <!-- New field for email address -->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showConfirmation() {
+            // Show a confirmation message to the user
+            alert("Reservation confirmed! We look forward to seeing you.");
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; Kabayan Restaurant 2023. All Rights Reserved | Designed by Ian Valencia and Gerald Bareng</p>
+</footer>
+</html>

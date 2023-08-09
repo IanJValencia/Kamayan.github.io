@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabayan</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Kabayan</h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./pictures/bbq.jpg" alt="BBQ">
+                <div class="slide-caption">BBQ</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="./pictures/sisig.jpg" alt="Sisig">
+                <div class="slide-caption">Sisig</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="./pictures/shomain.jpg" alt="Shomain">
+                <div class="slide-caption">Shomain</div>
+            </div>
+        
+            <!-- Add more images as needed -->
+        
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div style="text-align: center;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots for additional images -->
+            </div>
+        </div>
+
+        <div class="mission-statement">
+            <h2>Welcome to Kabayan</h2>
+            <p>Our mission is to share the rich culinary heritage of the Philippines with the world, one delicious bite at a
+                time. We are committed to sourcing the finest ingredients, preserving traditional cooking techniques, and
+                presenting authentic Filipino dishes that truly embody the flavors, aromas, and warmth of our culture. Through
+                our culinary journey, we aim to create memorable dining experiences that ignite a love for Filipino cuisine,
+                foster cultural appreciation, and bring people together in celebration of our vibrant food traditions</p>
+            <a href="menu.html" class="cta-button">Explore Our Menu</a>
+        </div>
+    </main>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change slide every 4 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+<footer>
+    <p>&copy; Kabayan Restaurant 2023. All Rights Reserved | Designed by Ian Valencia and Gerald Bareng</p>
+</footer>
+</html>
